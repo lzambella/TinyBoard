@@ -1,1 +1,1 @@
-Working on rev2 and decided to have versionaly for board so schematics are not complete yet
+Working on rev2 and decided to have versioning for board so layouts are not complete yet
