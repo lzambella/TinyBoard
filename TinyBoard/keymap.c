@@ -48,7 +48,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         GRAVE,    1,    2,    3,   4,      5,    6,     7,      8,     9,    0,      MINUS, \
         NO,    NO,    NO,    NO,   NO,      NO,    HOME,     END,      LBRACKET,     RBRACKET, QUOTE, ENTER,  \
         LSHIFT,    NO,    NO,    NO,   NO,      NO,    PGUP,     PGDOWN,      NO, NO,  NO,  RSHIFT, \
-        LCTRL,  LGUI, LALT, FN0, SPACE,  NO,   SPACE, MINUS, FN1,   RALT,  RGUI,  RCTRL
+        LCTRL,  LGUI, LALT, FN0, SPACE,  NO,   SPACE, EQUAL, FN1,   RALT,  RGUI,  RCTRL
     ),
     [2]= KEYMAP(
         NO,    F1,    F2,    F3,   F4,      F5,    F6,     F7,      F8,     F9,    F10,      F11, \
