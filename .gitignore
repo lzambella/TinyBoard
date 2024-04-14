@@ -11,4 +11,6 @@ tags
 *~
 build/
 *.bak
-./schematics/*backups
+*-backups/
+*.lck
+./TinyBoard/obj_*
