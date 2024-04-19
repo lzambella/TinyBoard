@@ -14,3 +14,4 @@ build/
 *-backups/
 *.lck
 ./TinyBoard/obj_*
+fp-info-cache

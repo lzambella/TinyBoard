@@ -40,7 +40,7 @@ All buttons are resisitive pull up (IE pressing sends a LOW to mcu pin)
 //#define MATRIX_HAS_GHOST
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE    3
+#define DEBOUNCE    10
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 //#define LOCKING_SUPPORT_ENABLE
