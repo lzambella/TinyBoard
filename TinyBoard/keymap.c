@@ -40,18 +40,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = KEYMAP(
         ESC,    Q,    W,    E,   R,      T,    Y,     U,      I,     O,    P,      BSLASH, \
-        TAB,    A,    S,    D,   F,      G,    H,     J,      K,     L,    SCOLON, ENTER,  \
+        TAB,    A,    S,    D,   F,      G,    H,     J,      K,     L,    QUOTE, ENTER,  \
         LSHIFT, Z,    X,    C,   V,      B,    N,     M,      COMMA, DOT,  SLASH,  RSHIFT, \
         LCTRL,  LGUI, LALT, FN0, SPACE,  NO,   SPACE, BSPACE, FN1,   RALT,  RGUI,  RCTRL
     ),
     [1] = KEYMAP(
         GRAVE,    1,    2,    3,   4,      5,    6,     7,      8,     9,    0,      MINUS, \
-        NO,    NO,    NO,    NO,   NO,      NO,    HOME,     END,      LBRACKET,     RBRACKET, QUOTE, ENTER,  \
+        NO,    NO,    NO,    NO,   NO,      NO,    HOME,     END,      LBRACKET,     RBRACKET, SCOLON, ENTER,  \
         LSHIFT,    NO,    NO,    NO,   NO,      NO,    PGUP,     PGDOWN,      NO, NO,  NO,  RSHIFT, \
-        LCTRL,  LGUI, LALT, FN0, SPACE,  NO,   SPACE, MINUS, FN1,   RALT,  RGUI,  RCTRL
+        LCTRL,  LGUI, LALT, FN0, SPACE,  NO,   SPACE, EQUAL, FN1,   RALT,  RGUI,  RCTRL
     ),
     [2]= KEYMAP(
-        NO,    F1,    F2,    F3,   F4,      F5,    F6,     F7,      F8,     F9,    F10,      F11, \
+        DELETE,    F1,    F2,    F3,   F4,      F5,    F6,     F7,      F8,     F9,    F10,      F11, \
         NO,    NO,    NO,    NO,   NO,      NO,    NO,     NO,      NO,     UP, NO, ENTER,  \
         LSHIFT,    NO,    NO,    NO,   NO,      NO,    PGUP,     PGDOWN,      LEFT, DOWN,  RIGHT,  RSHIFT, \
         LCTRL,  LGUI, LALT, FN0, SPACE,  NO,   SPACE, F12, FN1,   RALT,  RGUI,  RCTRL
