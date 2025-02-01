@@ -1,10 +1,12 @@
-Working on rev2 and decided to have versioning for board so layouts are not complete yet. rev1 in schematics folder should be working as is.
+40% keyboard based on a layout I found somewhere, possibly Reddit, and modified for my own tastes. Runs on TMK firmware.
 
-rev1 allows for bluetooth via adafruit breakout board but firmware is not coded for it and may never be since it works weird with TMK (I've done it before it's not elegant)
+**Switches**
+Uses any Cherry full size 5-hole compatible ones. I like to use Gateron North Poles.
+
+LEDs should be 1206 package.
 
 TODO:
 * Add STEP files for 3d printing/designing
-* board rev2 without bluetooth and more compact size
 * PDF files of schematics
 * Better docs
 * images
