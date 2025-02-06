@@ -15,3 +15,6 @@ build/
 *.lck
 ./TinyBoard/obj_*
 fp-info-cache
+schematics/40 Keyboard.kicad_prl
+schematics/rev2/40 Keyboard.kicad_prl
+schematics/40 Keyboard.kicad_prl

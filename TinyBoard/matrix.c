@@ -35,38 +35,34 @@ void matrix_init(void) {
     PORTF |= (1 << PF5);
     
     // Set column pins as input
-    DDRF &= ~(1 << 6); // col 1
+    DDRD &= ~(1 << 0); // col 1
+    DDRD &= ~(1 << 1); // 2
+    DDRD &= ~(1 << 2); // 3
+    DDRD &= ~(1 << 3); // 4
+    DDRD &= ~(1 << 4); // 5
+    DDRD &= ~(1 << 5); // 6
+    DDRD &= ~(1 << 6); // 7
+    DDRD &= ~(1 << 7); // 8
 
-    DDRB &= ~(1 << 6); // 2
-    DDRB &= ~(1 << 5); // 3
-    DDRB &= ~(1 << 4); // 4
-    DDRB &= ~(1 << 3); // 5
-    DDRB &= ~(1 << 2); // 6
-    DDRB &= ~(1 << 1); // 7
-    DDRB &= ~(1 << 0); // 8
+    DDRB &= ~(1 << 4); // 9
+    DDRB &= ~(1 << 5); // 10
+    DDRB &= ~(1 << 6); // 11
+    DDRB &= ~(1 << 7); // 12
 
-    DDRC &= ~(1 << 6); // 9
-    DDRC &= ~(1 << 7); // 10
+    // Enable internal pullups
+    PORTD |= (1 << 0); // col 1
+    PORTD |= (1 << 1); // 2
+    PORTD |= (1 << 2); // 3
+    PORTD |= (1 << 3); // 4
+    PORTD |= (1 << 4); // 5
+    PORTD |= (1 << 5); // 6
+    PORTD |= (1 << 6); // 7
+    PORTD |= (1 << 7); // 8
 
-    DDRD &= ~(1 << 0); // 11
-    DDRD &= ~(1 << 1); // 12
-
-    // Disable internal pull ups on col
-    PORTF &= ~(1 << 6); // col 1
-
-    PORTB &= ~(1 << 6); // 2
-    PORTB &= ~(1 << 5); // 3
-    PORTB &= ~(1 << 4); // 4
-    PORTB &= ~(1 << 3); // 5
-    PORTB &= ~(1 << 2); // 6
-    PORTB &= ~(1 << 1); // 7
-    PORTB &= ~(1 << 0); // 8
-
-    PORTC &= ~(1 << 6); // 9
-    PORTC &= ~(1 << 7); // 10
-
-    PORTD &= ~(1 << 0); // 11
-    PORTD &= ~(1 << 1); // 12
+    PORTB |= (1 << 4); // 9
+    PORTB |= (1 << 5); // 10
+    PORTB |= (1 << 6); // 11
+    PORTB |= (1 << 7); // 12
 
     // make sure matrix is cleared on init
     for (int i = 0; i < MATRIX_ROWS; i++) { 
@@ -132,21 +128,19 @@ static matrix_row_t read_cols()
     // Get the state of the columns
 
     // If we read a LOW at the pin input (switch pressed) we want the variable to be HIGH
-    uint16_t c1 =  ((~PINF & (1 << 6)) >> 6); // F6
+    uint16_t c1 =  ((~PIND & (1 << PIND0)) >> PIND0);
+    uint16_t c2 =  ((~PIND & (1 << PIND1)) >> PIND1);
+    uint16_t c3 =  ((~PIND & (1 << PIND2)) >> PIND2);
+    uint16_t c4 =  ((~PIND & (1 << PIND3)) >> PIND3);
+    uint16_t c5 =  ((~PIND & (1 << PIND4)) >> PIND4);
+    uint16_t c6 =  ((~PIND & (1 << PIND5)) >> PIND5);
+    uint16_t c7 =  ((~PIND & (1 << PIND6)) >> PIND6);
+    uint16_t c8 =  ((~PIND & (1 << PIND7)) >> PIND7);
 
-    uint16_t c2 =  ((~PINB & (1 << 6)) >> 6); // B6
-    uint16_t c3 =  ((~PINB & (1 << 5)) >> 5); // B5
-    uint16_t c4 =  ((~PINB & (1 << 4)) >> 4); // B4
-    uint16_t c5 =  ((~PINB & (1 << 3)) >> 3); // B3
-    uint16_t c6 =  ((~PINB & (1 << 2)) >> 2); // B2
-    uint16_t c7 =  ((~PINB & (1 << 1)) >> 1); // B1
-    uint16_t c8 =  ((~PINB & (1 << 0)) >> 0); // B0
-
-    uint16_t c9 =  ((~PINC & (1 << 6)) >> 6); // C6
-    uint16_t c10 = ((~PINC & (1 << 7)) >> 7); // C7
-
-    uint16_t c11 = ((~PIND & (1 << 0)) >> 0); // D0
-    uint16_t c12 = ((~PIND & (1 << 1)) >> 1); // D1
+    uint16_t c9 =  ((~PINB & (1 << PINB4)) >> PINB4);
+    uint16_t c10 = ((~PINB & (1 << PINB5)) >> PINB5);
+    uint16_t c11 = ((~PINB & (1 << PINB6)) >> PINB6);
+    uint16_t c12 = ((~PINB & (1 << PINB7)) >> PINB7);
 
     // Make a continuous integer of the inputs
     matrix_row_t C = 0;
